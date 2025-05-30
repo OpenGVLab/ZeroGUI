@@ -1,8 +1,9 @@
 # ZeroGUI: Automating Online GUI Learning at Zero Human Cost
 
+[![Static Badge](https://img.shields.io/badge/arXiv-2505.23762-green)](https://arxiv.org/abs/2505.23762)
 [![Static Badge](https://img.shields.io/badge/🤗&nbsp;-HuggingFace-blue)](https://huggingface.co/collections/OpenGVLab/zerogui-68388cb7dbf608133c4b5fb2)
 
-We propose **ZeroGUI**, a fully automated online reinforcement learning framework that enables GUI agents to train and adapt in interactive environments at zero human cost.
+We propose [**ZeroGUI**](https://arxiv.org/abs/2505.23762), a fully automated online reinforcement learning framework that enables GUI agents to train and adapt in interactive environments at zero human cost.
 
 ## 🚀 Highlights
 
@@ -30,12 +31,11 @@ We propose **ZeroGUI**, a fully automated online reinforcement learning framewor
 
 ### 💻 OSWorld
 
-
 ![results_osworld](./assets/results_osworld.png)
 
 ### 📱 AndroidLab
 
-<div style="text-align: center;">
+<div align="center">
     <img src="./assets/results_androidlab.png" width="85%"/>
 </div>
 

@@ -54,6 +54,7 @@ If you find this work helpful in your research, please consider citing:
 @article{yang2025zerogui,
   title={ZeroGUI: Automating Online GUI Learning at Zero Human Cost},
   author={Yang, Chenyu and Shiqian, Su and Liu, Shi and Dong, Xuan and Yu, Yue and Su, Weijie and Wang, Xuehui and Liu, Zhaoyang and Zhu, Jinguo and Li, Hao and Wang, Wenhai and Qiao, Yu and Zhu, Xizhou and Dai, Jifeng},
+  journal={arXiv preprint arXiv:2505.23762},
   year={2025}
 }
 ```

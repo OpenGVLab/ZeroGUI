@@ -5,6 +5,14 @@
 
 We propose [**ZeroGUI**](https://arxiv.org/abs/2505.23762), a fully automated online reinforcement learning framework that enables GUI agents to train and adapt in interactive environments at zero human cost.
 
+**🔥 Updates**
+
+- [x] **2025/06/15**: Release the evaluation code and scripts on OSWorld.
+
+- [x] **2025/05/30**: Release the task generation code on OSWorld.
+
+- [x] **2025/05/30**: Release our paper and model checkpoints.
+
 ## 🚀 Highlights
 
 * 🚫 **Zero Human Cost:** Requires no handcrafted task annotations or rule-based reward designs.
@@ -39,12 +47,34 @@ We propose [**ZeroGUI**](https://arxiv.org/abs/2505.23762), a fully automated on
     <img src="./assets/results_androidlab.png" width="85%"/>
 </div>
 
-### 📦 Checkpoints
+## 📦 Checkpoints
 
 | base model | env | 🤗 link |
 | :--: | :--: | :--: |
 | UI-TARS-7B-DPO | OSWorld | [ZeroGUI-OSWorld-7B](https://huggingface.co/OpenGVLab/ZeroGUI-OSWorld-7B) |
 | UI-TARS-7B-DPO | AndroidLab | [ZeroGUI-AndroidLab-7B](https://huggingface.co/OpenGVLab/ZeroGUI-AndroidLab-7B) |
+
+## 🛠️ Usage
+
+### Setup
+
+1. Setup python environment: `pip install -r requirements.txt`. Please use `python>=3.10`.
+
+2. Setup GUI environment: [OSWorld](./osworld/README.md).
+
+### Evaluation
+
+Use the following command to evaluate the model on OSWorld:
+
+```bash
+bash scripts/eval/eval_osworld.sh OpenGVLab/ZeroGUI-OSWorld-7B <env-url> <env-manager-port>
+```
+
+where `<env-url>` and `<env-manager-port>` are the URL and port of the API manager launched [here](./osworld/env_api_manager.py).
+
+### Training
+
+Based on [OpenRLHF](./openrlhf/), coming soon.
 
 ## 📚 Citation
 

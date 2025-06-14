@@ -175,3 +175,4 @@ cython_debug/
 
 # custom
 .DS_Store
+results/

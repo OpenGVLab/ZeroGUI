@@ -212,8 +212,7 @@ def train(args):
 
     if ema_model:
         ema_model._offload = True
-        ema_model = strategy.
-        (ema_model, is_rlhf=True)
+        ema_model = strategy.prepare(ema_model, is_rlhf=True)
 
     # load checkpoint
     consumed_samples = 0

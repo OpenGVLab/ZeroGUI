@@ -7,6 +7,8 @@ We propose [**ZeroGUI**](https://arxiv.org/abs/2505.23762), a fully automated on
 
 **🔥 Updates**
 
+- [x] **2025/07/05**: Release the training scripts on OSWorld.
+
 - [x] **2025/06/15**: Release the evaluation code and scripts on OSWorld.
 
 - [x] **2025/05/30**: Release the task generation code on OSWorld.
@@ -54,6 +56,10 @@ We propose [**ZeroGUI**](https://arxiv.org/abs/2505.23762), a fully automated on
 | UI-TARS-7B-DPO | OSWorld | [ZeroGUI-OSWorld-7B](https://huggingface.co/OpenGVLab/ZeroGUI-OSWorld-7B) |
 | UI-TARS-7B-DPO | AndroidLab | [ZeroGUI-AndroidLab-7B](https://huggingface.co/OpenGVLab/ZeroGUI-AndroidLab-7B) |
 
+### Model Deployment
+
+The prompts and parsing functions are provided in [`openrlhf/agent/uitars.py`](./openrlhf/agent/uitars.py). You can refer to [UI-TARS](https://github.com/bytedance/UI-TARS/blob/main/README_v1.md) for more details.
+
 ## 🛠️ Usage
 
 ### Setup
@@ -74,7 +80,25 @@ where `<env-url>` and `<env-manager-port>` are the URL and port of the API manag
 
 ### Training
 
-Based on [OpenRLHF](./openrlhf/), coming soon.
+#### Test-Time Training
+
+[`scripts/train_osworld_test-time`](./scripts/train_osworld_test-time) contains an example script for test-time training on OSWorld.
+
+1. Modify [`train.sh`](./scripts/train_osworld_test-time/train.sh) according to your server setup. `ENV_URL` and `ENV_MANAGER_PORT` are the URL and port of the environment API manager. `API_BASE_URL` and `API_KEY` are used for VLM-based reward estimation. You can deploy the VLM locally or use online APIs.
+
+2. Modify the Slurm settings in [`slurm_launch.sh`](./scripts/train_osworld_test-time/slurm_launch.sh). Adjust the environment variables provided by your Slurm configuration in [`ray_launch.sh`](./scripts/train_osworld_test-time/ray_launch.sh)
+
+3. Run the following command:
+
+```bash
+bash scripts/train_osworld_test-time/srun_launch.sh
+```
+
+#### Generated Task Training.
+
+1. Run task generation: [OSWorld](./osworld/README.md). Organize the task metas like [`data/osworld_test_all.jsonl`](./data/osworld_test_all.jsonl).
+
+2. Launch training similarly to test-time training.
 
 ## 📚 Citation
 

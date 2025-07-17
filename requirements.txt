@@ -15,7 +15,7 @@ tensorboard
 torch
 torchmetrics
 tqdm
-transformers==4.47.0
+transformers==4.48.2
 transformers_stream_generator
 vllm==0.8.1
 wandb
